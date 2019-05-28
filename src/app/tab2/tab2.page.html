@@ -1,9 +1,22 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title><ion-icon name="heart"></ion-icon> Saved</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <p>
+        Not every day is filled with adventure, but you can start planning for the next one. Tap on any home to start saving your favourites here.
+      </p>
+      <ion-button (click)="navToExplore()">Find Homes
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

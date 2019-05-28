@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title><ion-icon name="send"></ion-icon> Trips</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>No Upcoming Trips</ion-card-title>
+      <ion-card-subtitle>Start exploring ideas for your next trip.</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+        <ion-button (click)="navToExplore()">Explore Airbnb
+        </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Your Current Trip</ion-card-title>
+      <ion-card-subtitle>You are currently on a trip in Lisbon, Portugal.</ion-card-subtitle>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <ion-avatar style="size: 200%">
+        <img src="https://i.boring.host/165TjKib.jpg" alt="A photo of a holiday home" />
+      </ion-avatar>
+      <ion-button (click)="navToRental()">See Rental Details
+      </ion-button>
+    </ion-card-content>
+    
+  </ion-card>
+</ion-content>

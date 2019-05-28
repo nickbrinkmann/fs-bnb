@@ -1,9 +1,19 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab Three
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title><ion-icon name="mail"></ion-icon> Inbox</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <p>You have no unread messages.</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
