@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
 
+import { Pasttrip, User, Property, Payment, Message } from '../models';
+
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',

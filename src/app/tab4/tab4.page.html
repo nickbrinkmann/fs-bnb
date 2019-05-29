@@ -5,7 +5,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="tabs"></ion-back-button>
     </ion-buttons>
-    <ion-title><ion-icon name="person"></ion-icon> Profile</ion-title>
+    <ion-title><ion-icon name="person"></ion-icon> Profile of {{currentuser.firstname}}</ion-title>
   </ion-toolbar>
 </ion-header>
   
@@ -13,10 +13,10 @@
     
     <div class="ion-padding">
       <ion-avatar class="avatar">
-        <img src="https://i.boring.host/15G7acWX.png">
+        <img src="{{currentuser.avatar_src}}">
       </ion-avatar>
-      <h2>Hi, I'm Nick</h2>
-      <p>Joined in May, 2019</p>
+      <h2>Hi, I'm {{currentuser.firstname}}</h2>
+      <p>Joined in {{currentuser.join_date}}</p>
     </div>
   
     <ion-card>
@@ -24,9 +24,9 @@
         <ion-card-title>About</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <p><ion-icon name="home"></ion-icon>Lives in Johannesburg, South Africa</p>
-        <p><ion-icon name="mail"></ion-icon>Email address: nick.brinkmann4@gmail.com</p>
-        <p><ion-icon name="call"></ion-icon>Phone number: +27820426996</p>
+        <p><ion-icon name="home"></ion-icon>Lives in {{currentuser.where_lives}}</p>
+        <p><ion-icon name="mail"></ion-icon>Email address: {{currentuser.email}}</p>
+        <p><ion-icon name="call"></ion-icon>Phone number: {{currentuser.phone_number}}</p>
       </ion-card-content>
 
     </ion-card>
@@ -37,8 +37,8 @@
       </ion-card-header>
 
       <ion-card-content>
-        <p>Number of Bookings Made: None</p>
-        <p>Number of Reviews Received: None</p>
+        <p>Number of Trips Completed: {{currentuser.trips_booked}}</p>
+        <p>Number of Reviews Received: {{currentuser.reviews_given}}</p>
       </ion-card-content>
     </ion-card>
 
@@ -51,5 +51,6 @@
         *User Reviews Go Here*
       </ion-card-content>
     </ion-card>
+
 
   </ion-content>
