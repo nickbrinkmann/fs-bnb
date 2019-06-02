@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button defaultHref = 'tab5'></ion-back-button>
+    <ion-title>{{currentPasttrip.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{currentPasttrip.name}}</ion-card-title>
+      <ion-card-subtitle>{{currentPasttrip.address}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-avatar>
+        <img src="{{currentPasttrip.imgName}}">
+      </ion-avatar>
+      <p>You visited from {{currentPasttrip.startdate}} to {{currentPasttrip.enddate}}.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

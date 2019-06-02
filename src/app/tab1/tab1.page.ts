@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
 
-import { Pasttrip, User, Property, Payment, Message } from '../models';
+import { User, Property, Pasttrip, Payment, Message } from '../models';
+import { ActivatedRoute } from '@angular/router';
+import { PropertyService } from '../services/property.service';
 
 @Component({
   selector: 'app-tab1',
@@ -10,33 +12,31 @@ import { Pasttrip, User, Property, Payment, Message } from '../models';
 })
 export class Tab1Page {
 
-  public Listings: Array<Property> = [];
+  public properties: Array<Property> = [];
 
   constructor(
-    private navCtrl: NavController
+    private navCtrl: NavController,
+    private activatedRoute: ActivatedRoute,
+    private propertyService: PropertyService
   ) {
-    let listing1 = new Property();
-    listing1.price="$50 per day";
-    listing1.imgName="https://i.boring.host/16AXfItu.jpg";
-    listing1.location="Zagreb, Croatia";
-
-    let listing2 = new Property();
-    listing2.price="$100 per day";
-    listing2.imgName="https://i.boring.host/16AYUMML.jpg";
-    listing2.location="Buenos Aires, Argentina";
-
-    let listing3 = new Property();
-    listing3.price="$30 per day";
-    listing3.imgName="https://i.boring.host/16AZPdCE.jpg";
-    listing3.location="Toronto, Canada";
-
-    this.Listings.push(listing1);
-    this.Listings.push(listing2);
-    this.Listings.push(listing3);
+    this.propertyService.getAllProperties();
+    this.properties = this.propertyService.properties;
+    // this.properties = this.propertyService.getAllProperties();
+    // This doesn't work for some reason
   }
 
-  navToProfile(){
+  navToProfile() {
     this.navCtrl.navigateForward("tab4");
+  }
+
+  navToProperty(property: Property) {
+    this.navCtrl.navigateForward("property-details", {
+      queryParams: {
+        q: "ionic",
+        propertyName: property.name,
+        propertyId: property.id
+      }
+    });
   }
 
 }

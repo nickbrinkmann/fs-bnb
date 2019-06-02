@@ -46,16 +46,19 @@
     <ion-card-content>
 
     <ion-list>
-      <ion-item *ngFor="let pasttrip of Pasttrips">
+      <ion-item
+      *ngFor="let pasttrip of pasttrips"
+      (click) = "navToPasttrip(pasttrip)">
         <ion-card>
           <ion-card-header>
-            <ion-card-title>{{pasttrip.location}}</ion-card-title>
-            <ion-card-subtitle>{{pasttrip.startdate}} to {{pasttrip.enddate}}</ion-card-subtitle>
+            <ion-card-title>{{pasttrip.name}}</ion-card-title>
+            <ion-card-subtitle>Your trip from {{pasttrip.startdate}} to {{pasttrip.enddate}} in {{pasttrip.location}}</ion-card-subtitle>
           </ion-card-header>
           <ion-card-content>
             <ion-avatar>
               <img src="{{pasttrip.imgName}}" />
             </ion-avatar>
+            <p></p>
           </ion-card-content>
         </ion-card>
       </ion-item>
