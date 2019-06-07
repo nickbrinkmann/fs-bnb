@@ -12,7 +12,7 @@ import { NavController } from '@ionic/angular';
 })
 export class Tab4Page implements OnInit {
 
-  public currentuser: User;
+  // public currentuser: User;
 
   //Use this going forward
   public user: User = new User();
@@ -53,11 +53,11 @@ export class Tab4Page implements OnInit {
 
   ngOnInit() {
     //The parameters function is called once the query parameters are available for use
-    this.activatedRoute.queryParamMap.subscribe(
-      //The return type of parameters is ParamMap
-      (parameters: ParamMap) => {
-        console.log(parameters);
-        console.log(parameters.get("user_id"));
+    // this.activatedRoute.queryParamMap.subscribe(
+    //   //The return type of parameters is ParamMap
+    //   (parameters: ParamMap) => {
+    //     console.log(parameters);
+    //     console.log(parameters.get("user_id"));
 
         // http://localhost:8100/tabs/tab4?user_id=5
         // ?
@@ -97,8 +97,8 @@ export class Tab4Page implements OnInit {
         //email: "email"
         //})
 
-      }
-    );
+    //   }
+    // );
 
 
   }

@@ -33,10 +33,14 @@ export class RegisterPage implements OnInit {
       //Response is for success, err is for errors.
       .subscribe(
         (response: any) => {
-          console.log(response);
+          //If successful login, stores userId to pass as query parameter to other pages in app
+        const userId = response.id;
 
-          //Trying to navigate to new page
-          // this.navToProfile();
+        //Stores userid in local storage so that we can keep the user id everywhere once logged in. See its complement in
+        //tab4.page.ts
+        localStorage.setItem("user_id", userId);
+
+          //Navigates to a
           this.navCtrl.navigateForward('tabs',
             {
               queryParams: {
