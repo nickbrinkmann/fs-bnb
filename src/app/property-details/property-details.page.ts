@@ -38,7 +38,7 @@ export class PropertyDetailsPage implements OnInit {
 
     let arrow = async (data: any) => {
       this.nameOfProperty = data.params.propertyName;
-      this.propertyId=data.params.propertyId;
+      this.propertyId = data.params.propertyId;
 
       this.currentProperty = this.PropertyService.findPropertyById(this.propertyId);
 

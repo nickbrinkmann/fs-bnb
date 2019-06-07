@@ -14,14 +14,14 @@ export class User {
     constructor() {
         this.firstname = "";
         this.lastname = "";
-        this.id = undefined;
+        this.id = 0;
         this.email = "";
         this.phone_number = "";
         this.where_lives = "";
         this.join_date = "";
         this.avatar_src = "";
-        this.trips_booked = undefined;
-        this.reviews_given = undefined;
+        this.trips_booked = 0;
+        this.reviews_given = 0;
         this.on_trip = true;
     }
 }

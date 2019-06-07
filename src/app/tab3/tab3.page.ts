@@ -25,14 +25,21 @@ export class Tab3Page {
     message2.content="Let's go for a run.";
 
     let message3 = new Message();
-    message3.sender="Isaac Blabla";
+    message3.sender="Isaac Who Dis???";
     message3.recipient="Nick Brinkmann";
     message3.subject="I am a climber";
     message3.content="I like climbing very much. I am so tall and agile.";
 
+    let message4 = new Message();
+    message4.sender="Yuki Peters";
+    message4.recipient="Nick Brinkmann";
+    message4.subject="God damn, god damn";
+    message4.content="Conversations with legends. Crazy how one day your idols can turn into your brethren. Bitches we severin'.";
+
     this.messages.push(message1);
     this.messages.push(message2);
     this.messages.push(message3);
+    this.messages.push(message4);
   }
 
 }
