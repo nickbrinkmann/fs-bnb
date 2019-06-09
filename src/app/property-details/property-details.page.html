@@ -1,23 +1,23 @@
 <ion-header>
   <ion-toolbar>
     <ion-back-button defaultHref='tabs'></ion-back-button>
-    <ion-title>
+    <ion-title *ngIf = "currentProperty">
       {{currentProperty.name}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
+  <ion-card *ngIf="currentProperty">
     <ion-card-header>
       <ion-card-title>{{currentProperty.name}}</ion-card-title>
-      <ion-card-subtitle>{{currentProperty.address}}</ion-card-subtitle>
+      <ion-card-subtitle>{{currentProperty.location}}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
       <ion-avatar>
-        <img src="{{currentProperty.imgName}}">
+        <img src="{{currentProperty.imgname}}">
       </ion-avatar>
-      <p>{{currentProperty.price}} at {{currentProperty.address}}. It can host {{currentProperty.occupancy}} people.</p>
+      <p>Price Per Night: ${{currentProperty.price}}</p>
     </ion-card-content>
   </ion-card>
 
@@ -39,5 +39,3 @@
     </ion-card-content>
   </ion-card>
 </ion-content>
-
-<!-- *ngIf="currentProperty" -->

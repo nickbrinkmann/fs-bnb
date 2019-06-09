@@ -39,7 +39,7 @@ export class LoginPage implements OnInit {
         localStorage.setItem("user_id", userId);
 
         //Navigates to profile and passes in user id as query parameter
-        this.navCtrl.navigateForward("tabs/tab4", {
+        this.navCtrl.navigateForward("tabs", {
           queryParams: {
             user_id: userId
           }

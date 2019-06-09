@@ -14,7 +14,7 @@ export class PropertyService {
     property1.id=1;
     property1.name="One";
     property1.price="$50 per day";
-    property1.imgName="https://i.boring.host/16AXfItu.jpg";
+    property1.imgname="https://i.boring.host/16AXfItu.jpg";
     property1.location="Zagreb, Croatia";
     property1.address="10 Fake Road, Zagreb";
     property1.occupancy=5;
@@ -23,7 +23,7 @@ export class PropertyService {
     property2.id=2;
     property2.name="Two";
     property2.price="$100 per day";
-    property2.imgName="https://i.boring.host/16AYUMML.jpg";
+    property2.imgname="https://i.boring.host/16AYUMML.jpg";
     property2.location="Buenos Aires, Argentina";
     property2.address="53 Does Not Exist Drive, Buenos Aires";
     property2.occupancy=3;
@@ -32,7 +32,7 @@ export class PropertyService {
     property3.id=3;
     property3.name="Three";
     property3.price="$30 per day";
-    property3.imgName="https://i.boring.host/16AZPdCE.jpg";
+    property3.imgname="https://i.boring.host/16AZPdCE.jpg";
     property3.location="Toronto, Canada";
     property3.address="22 Isnotreal Boulevard, Toronto";
     property3.occupancy=10;
@@ -49,7 +49,7 @@ export class PropertyService {
     property1.id=1;
     property1.name="One";
     property1.price="$50 per day";
-    property1.imgName="https://i.boring.host/16AXfItu.jpg";
+    property1.imgname="https://i.boring.host/16AXfItu.jpg";
     property1.location="Zagreb, Croatia";
     property1.address="10 Fake Road, Zagreb";
     property1.occupancy=5;
@@ -58,7 +58,7 @@ export class PropertyService {
     property2.id=2;
     property2.name="Two";
     property2.price="$100 per day";
-    property2.imgName="https://i.boring.host/16AYUMML.jpg";
+    property2.imgname="https://i.boring.host/16AYUMML.jpg";
     property2.location="Buenos Aires, Argentina";
     property2.address="53 Does Not Exist Drive, Buenos Aires";
     property2.occupancy=3;
@@ -67,7 +67,7 @@ export class PropertyService {
     property3.id=3;
     property3.name="Three";
     property3.price="$30 per day";
-    property3.imgName="https://i.boring.host/16AZPdCE.jpg";
+    property3.imgname="https://i.boring.host/16AZPdCE.jpg";
     property3.location="Toronto, Canada";
     property3.address="22 Isnotreal Boulevard, Toronto";
     property3.occupancy=10;

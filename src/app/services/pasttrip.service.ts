@@ -13,7 +13,7 @@ export class PasttripService {
     pasttrip1.name = "One";
     pasttrip1.id = 1;
     pasttrip1.price = "$50 per day";
-    pasttrip1.imgName = "https://i.boring.host/16AXfItu.jpg";
+    pasttrip1.imgname = "https://i.boring.host/16AXfItu.jpg";
     pasttrip1.location = "Cape Town, South Africa";
     pasttrip1.startdate = "01/19/2017";
     pasttrip1.enddate = "02/12/2017";
@@ -22,7 +22,7 @@ export class PasttripService {
     pasttrip2.name = "Two";
     pasttrip2.id = 2;
     pasttrip2.price = "$45 per day";
-    pasttrip2.imgName = "https://i.boring.host/16AYUMML.jpg";
+    pasttrip2.imgname = "https://i.boring.host/16AYUMML.jpg";
     pasttrip2.location = "Reykjavik, Iceland";
     pasttrip2.startdate = "03/30/2018";
     pasttrip2.enddate = "04/12/2018";
@@ -31,7 +31,7 @@ export class PasttripService {
     pasttrip3.name = "Three";
     pasttrip3.id = 3;
     pasttrip3.price = "$70 per day";
-    pasttrip3.imgName = "https://i.boring.host/16AZPdCE.jpg";
+    pasttrip3.imgname = "https://i.boring.host/16AZPdCE.jpg";
     pasttrip3.location = "Singapore, Singapore";
     pasttrip3.startdate = "04/17/2019";
     pasttrip3.enddate = "05/10/2018";
@@ -47,7 +47,7 @@ export class PasttripService {
     pasttrip1.name = "One";
     pasttrip1.id = 1;
     pasttrip1.price = "$50 per day";
-    pasttrip1.imgName = "https://i.boring.host/16AXfItu.jpg";
+    pasttrip1.imgname = "https://i.boring.host/16AXfItu.jpg";
     pasttrip1.location = "Cape Town, South Africa";
     pasttrip1.address = "5 Orange Street, Bo-Kaap";
     pasttrip1.occupancy = 2;
@@ -58,7 +58,7 @@ export class PasttripService {
     pasttrip2.name = "Two";
     pasttrip2.id = 2;
     pasttrip2.price = "$45 per day";
-    pasttrip2.imgName = "https://i.boring.host/16AYUMML.jpg";
+    pasttrip2.imgname = "https://i.boring.host/16AYUMML.jpg";
     pasttrip2.location = "Reykjavik, Iceland";
     pasttrip2.address = "12 DonnoIceland Street, Reykjavik";
     pasttrip2.occupancy = 5;
@@ -69,7 +69,7 @@ export class PasttripService {
     pasttrip3.name = "Three";
     pasttrip3.id = 3;
     pasttrip3.price = "$70 per day";
-    pasttrip3.imgName = "https://i.boring.host/16AZPdCE.jpg";
+    pasttrip3.imgname = "https://i.boring.host/16AZPdCE.jpg";
     pasttrip3.location = "Singapore, Singapore";
     pasttrip3.address = "420 Nanny State Drive, Singapore";
     pasttrip3.occupancy = 4;

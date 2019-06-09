@@ -3,7 +3,7 @@ export class User {
     public lastname: string;
     public id: number;
     public email: string;
-    public phone_number: string;
+    public cellphone: string;
     public where_lives: string;
     public join_date: string;
     public avatar_src: string;
@@ -16,7 +16,7 @@ export class User {
         this.lastname = "";
         this.id = 0;
         this.email = "";
-        this.phone_number = "";
+        this.cellphone = "";
         this.where_lives = "";
         this.join_date = "";
         this.avatar_src = "";
