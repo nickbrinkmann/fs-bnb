@@ -11,15 +11,25 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PropertyDetailsPage implements OnInit {
 
+  //Variables for loading the property
   public propertyId: number;
   public currentProperty = new Property();
+
+  //Variables for making a booking
+  public datefrom: string;
+  public dateto: string;
+  public userid: number;
+  public useridstr: string;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private alertCtrl: AlertController,
     private navCtrl: NavController,
     private httpClient: HttpClient
-  ) { }
+  ) {
+    this.useridstr = localStorage.getItem("user_id");
+    this.userid = parseInt(this.useridstr);
+  }
 
   ngOnInit() {
 
@@ -73,6 +83,69 @@ export class PropertyDetailsPage implements OnInit {
 
   navigateBack() {
     this.navCtrl.navigateForward('tabs');
+  }
+
+  //Creates a booking request
+  submit() {
+    console.log("Submitting to the server...");
+    
+    var booking = {
+      datefrom: this.datefrom,
+      dateto: this.dateto,
+      userid: this.userid
+    }
+
+    this.httpClient
+      .post("http://localhost:3000/api/properties/" + this.propertyId + "/bookings", booking)
+      //Response is for success, err is for errors.
+      .subscribe(
+        (response: any) => {
+          console.log(response);
+
+          //Gives a successful booking alert
+          this.presentSuccess("Please await a response from the property owner notifying you if your request has been accepted.");
+
+          //Navigates back to tabs on successful booking request
+          this.navCtrl.navigateForward('tabs');
+        },
+        (err) => {
+          console.log(err);
+          this.presentAlert(err.error.message);
+        }
+      );
+  }
+
+  async presentAlert(error) {
+    const alert = await this.alertCtrl.create({
+      header: 'Error',
+      message: error,
+      buttons: [
+        {
+          text: 'OK',
+          handler: () => {
+            console.log('OK Clicked');
+          }
+        }
+      ]
+    });
+    return await alert.present();
+  }
+
+  async presentSuccess(message) {
+    const success = await this.alertCtrl.create({
+      header: "Success!",
+      subHeader: 'Your booking request has been created',
+      message: message,
+      buttons: [
+        {
+          text: 'OK',
+          handler: () => {
+            console.log('OK Clicked');
+          }
+        }
+      ]
+    });
+    return await success.present();
   }
 
 }

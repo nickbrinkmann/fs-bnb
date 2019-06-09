@@ -28,13 +28,13 @@
     <ion-card-content>
       <ion-item>
         <ion-label>Start Date</ion-label>
-        <ion-datetime displayFormat="DD//MM/YYYY" min="2019-01-01"></ion-datetime>
+        <ion-input [(ngModel)]="datefrom"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>End Date</ion-label>
-        <ion-datetime displayFormat="DD//MM/YYYY" min="2019-01-01"></ion-datetime>
+        <ion-input [(ngModel)]="dateto"></ion-input>
       </ion-item>
-      <ion-button>Book</ion-button>
+      <ion-button (click) = "submit()">Book</ion-button>
       <!-- This button needs to be changed to include a function so that when 'book' is clicked, some function is actually called that carries it out -->
     </ion-card-content>
   </ion-card>
